@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles/style.css">
+    <link rel="stylesheet" href="css/styles/responsive.css">
+    <link rel="stylesheet" href="css/fonts/font.css">
+    <!-- google charts libirary link -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Chartist.js libirary links -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <!-- font awesome libirary link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Rocket dashboard</title>
+</head>
+<body>
+    <input type="checkbox" name="menu" id="menu">
+    <main>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Rocket">
+                </div>
+                <div class="menu-button">
+                    <span class="menu"><label for="menu"><i class="fa-solid fa-bars fa-2xl"></i></label></span>
+                    <span class="close"><label for="menu"><i class="fa-solid fa-xmark fa-2xl"></i></label></span>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard-content">
+            <aside>
+                <div class="side-bar">
+                    <div class="sidebar-top">
+                        <div class="profile-picture">
+                            <img src="images/profile-picture-3.jpg" alt="girl">
+                        </div>
+                        <div class="text">
+                            <h2>Hi, Jane</h2>
+                            <button class="button">
+                                <span class="icon-margin"><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                    <div class="side-bar-block">
+                        <menu class="block-items">
+                            <li class="item">
+                                <a href="index.html">
+                                    <span class="item-icon"><i class="fa-solid fa-chart-pie"></i>
+                                    </span>
+                                    <h6>Overview</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="pages/messages.html">
+                                    <span class="item-icon"><i class="fa-solid fa-inbox"></i>
+                                    </span>
+                                    <h6>Messages</h6>
+                                    <span class="notification">4</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="pages/traffic.html">
+                                    <span class="item-icon"><i class="fa-solid fa-chart-line"></i>
+                                    </span>
+                                    <h6>Traffic & Engagement</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="item-icon"><i class="fa-solid fa-mobile-screen"></i>
+                                    </span>
+                                    <h6>App Analysis</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="item-icon"><i class="fa-solid fa-user-check"></i>
+                                    </span>
+                                    <h6>Users list</h6>
+                                </a>
+                            </li>
+                        </menu>
+                    </div>
+                </div>
+            </aside>
+            <section class="content">
+                <div class="actions-bar">
+                    <div class="action-button">
+                        <button class="task button">
+                            <span class="button-icon icon-margin"><i class="fa-solid fa-plus"></i></span>
+                            New Task
+                        </button>
+                    </div>
+                    <div class="action-group-button">
+                        <div class="share-button left-group-button">
+                            <button class="button">Share</button>
+                        </div>
+                        <div class="share-button right-group-button">
+                            <button class="button">Export</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="card split">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="icon">
+                                    <span>
+                                        <i class="fa-solid fa-chart-line fa-2xl"></i>
+                                    </span>
+                                </div>
+                                <div class="card-title">
+                                    <div class="name"><h4>Total Visits</h4></div>
+                                    <div class="number"><span>345,678</span></div>
+                                </div>
+                            </div>
+                            <div class="card-information">
+                                <div class="line">
+                                    <span class="date">Feb 1 - Apr 1,</span>
+                                    <span><i class="fa-solid fa-earth-americas"></i><span> WorldWide</span></span>
+                                </div>
+                                <div class="line">
+                                    <span class="percentage-up">
+                                        <i class="fa-solid fa-chevron-up"></i><span> 18.2%</span> 
+                                    </span>
+                                    <span> Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card split">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="icon">
+                                    <span><i class="fa-solid fa-users fa-2xl"></i></span>
+                                </div>
+                                <div class="card-title">
+                                    <div class="name"><h4>New Users </h4></div>
+                                    <div class="number"><span>5,342</span></div>
+                                </div>
+                            </div>
+                            <div class="card-information">
+                                <div class="line">
+                                    <span class="date">Feb 1 - Apr 1,</span>
+                                    <span><i class="fa-solid fa-earth-americas"></i><span> WorldWide</span></span>
+                                </div>
+                                <div class="line">
+                                    <span class="percentage-up">
+                                        <i class="fa-solid fa-chevron-up"></i><span> 28.2%</span> 
+                                    </span>
+                                    <span> Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card split traffic">
+                        <div>
+                            <div class="chart">
+                                <div class="ct-chart pie ct-golden-section" id="traffic-share"></div>  
+                            </div>
+                        </div>
+                        <div class="chart-details">
+                            <div class="block">
+                                <h4 class="main-title">Traffic Share</h4>
+                                <div class="line small">
+                                    <span class="date">Feb 1 - Apr 1.</span>
+                                    <span><span> WorldWide</span></span>
+                                </div>
+                                <div class="line">
+                                    <span class="detail-icon icon-margin"><i class="fa-solid fa-display"></i></span>
+                                    <span>Desktop <a href="#">70%</a></span>
+                                </div>
+                                <div class="line">
+                                    <span class="detail-icon icon-margin"><i class="fa-solid fa-mobile-screen"></i></span>
+                                    <span>Mobile Web <a href="#">30%</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card split">
+                        <div class="chart-details">
+                            <div class="block">
+                                <span class="sub-title">App Ranking</span>
+                                <h4 class="main-title">452</h4>
+                                <div class="line">
+                                    <span class="percentage-up"><span>18.2%</span></span> 
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="category"><span>All</span></div>
+                                <div class="category"><span>Widgets</span></div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart ct-golden-section" id="app-rank"></div>  
+                        </div>
+                    </div>
+                    <div class="chart-card split full">
+                        <div class="chart-details">
+                            <div class="block">
+                                <span class="sub-title">Organic vs paid Search</span>
+                                <h4 class="main-title">Traffic Distribution</h4>
+                                <div class="line">
+                                    <span class="percentage-up"><span></span>10.57%</span> 
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="category"><span>Organic</span></div>
+                                <div class="category"><span>Direct</span></div>
+                                <div class="category"><span>Paid</span></div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart pie ct-golden-section" id="traffic-distro"></div>  
+                        </div>
+                    </div>
+                    <div class="chart-card split full">
+                        <div class="chart-details">
+                            <div class="block">
+                                <span class="sub-title">Traffic by Source</span>
+                                <h4 class="main-title">Google</h4>
+                                <div class="line">
+                                    <span class="percentage-up"><span></span>10.57%</span> 
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="category"><span>Google</span></div>
+                                <div class="category"><span>Yahoo</span></div>
+                                <div class="category"><span>Yandex</span></div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart ct-golden-section" id="traffic-source"></div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="row">
+                        <div class="container">
+                            <div class="chart-card">
+                                <div class="chart-details">
+                                    <div class="block">
+                                        <span class="sub-title">Sales Value</span>
+                                        <h4 class="main-title">10,567</h4>
+                                        <div class="line">
+                                            <span class="percentage-up"><span></span>10.57%</span> 
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <button class="button month">Month</button>
+                                        <button class="button week">Week</button>
+                                    </div>
+                                </div>
+                                <div class="chart">
+                                    <div class="ct-chart ct-major-tenth" id="sales"></div>  
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="top-table">
+                                    <div class="block">
+                                        <h4 class="main-title">Page visits</h4>
+                                    </div>
+                                    <div class="block">
+                                        <button class="button month">See all</button>
+                                    </div>
+                                </div>
+                                <div class="table-content">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Page Name</th>
+                                                <th>Page Views</th>
+                                                <th>Page Value</th>
+                                                <th>Bounce Rate</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>/demo/admin/index.html</td>
+                                                <td>3,255</td>
+                                                <td>$20</td>
+                                                <td>
+                                                    <span class="up-arrow icon-margin"><i class="fa-solid fa-arrow-up"></i>
+                                                    </span>
+                                                    42,55%
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td>/demo/admin/forms.html	</td>
+                                                <td>2,987</td>
+                                                <td>$0</td>
+                                                <td>
+                                                    <span class="down-arrow icon-margin"><i class="fa-solid fa-arrow-up fa-rotate-180"></i>
+                                                    </span>
+                                                    43,52%
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td>/demo/admin/util.html</td>
+                                                <td>2,844</td>
+                                                <td>$294</td>
+                                                <td>
+                                                    <span class="down-arrow icon-margin"><i class="fa-solid fa-arrow-up fa-rotate-180"></i>
+                                                    </span>
+                                                    32,35%
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td>/demo/admin/validation.html</td>
+                                                <td>2,050</td>
+                                                <td>$147</td>
+                                                <td>
+                                                    <span class="up-arrow icon-margin"><i class="fa-solid fa-arrow-up"></i>
+                                                    </span>
+                                                    50,87%
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td>/demo/admin/modals.html</td>
+                                                <td>1,483</td>
+                                                <td>$19</td>
+                                                <td>
+                                                    <span class="up-arrow icon-margin"><i class="fa-solid fa-arrow-up"></i>
+                                                    </span>
+                                                    32,24%
+                                                </td>
+                                            </tr>   
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rank-card">
+                                <div class="rank-item">
+                                    <div class="rank-text">
+                                        <div class="line">
+                                            <span class="icon icon-margin-lg">
+                                                <i class="fa-solid fa-earth-americas fa-sm"></i>
+                                            </span>
+                                            <h6>Global Rank</h6>
+                                        </div>
+                                    </div>
+                                    <div class="rank-number">
+                                        <h6 class="icon-margin">#755</h6>
+                                        <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                                    </div>
+                                </div>
+                                <div class="rank-item">
+                                    <div class="rank-text">
+                                        <div class="line">
+                                            <span class="icon icon-margin-lg">
+                                                <i class="fa-solid fa-flag-usa fa-sm"></i>
+                                            </span>
+                                            <h6>Country Rank</h6>
+                                        </div>
+                                        <div class="line small">
+                                            <h6 class="icon-margin">United States</h6>
+                                            <span">
+                                            <i class="fa-solid fa-chevron-up green fa-xs"></i></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="rank-number">
+                                        <h6 class="icon-margin">#32</h6>
+                                        <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                                    </div>
+                                </div>
+                                <div class="rank-item">
+                                    <div class="rank-text">
+                                        <div class="line">
+                                            <span class="icon icon-margin-lg">
+                                                <i class="fa-solid fa-folder-open fa-sm"></i>
+                                            </span>
+                                            <h6>Category Rank</h6>
+                                        </div>
+                                        <div class="line small">
+                                            <a href="#">Travel &gt; Accomodation</h6>
+                                            <span">
+                                        </div>
+                                    </div>
+                                    <div class="rank-number">
+                                        <h6 class="icon-margin">#16</h6>
+                                        <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="acquisition card">
+                            <div class="acquisition-content">
+                                <div class="title">
+                                    <h4>Acquisition</h4>
+                                </div>
+                                <div class="description">
+                                    <p>Tells you where your visitors originated from, such as search engines, social networks or website referrals.                                        
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <span><i class="fa-solid fa-chart-column fa-lg"></i></span>
+                                    </div>
+                                    <div class="card-title">
+                                        <div class="name"><h4>Bounce Rate</h4></div>
+                                        <div class="number"><span>33.50%</span></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <span><i class="fa-solid fa-chart-area fa-lg"></i></span>
+                                    </div>
+                                    <div class="card-title">
+                                        <div class="name"><h4>Sessions</h4></div>
+                                        <div class="number"><span>9,567</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map card">
+                            <div class="card-header">
+                                <h3>Visit By Country</h3>
+                            </div>
+                            <div class="chart">
+                                <!-- <div id="regions_div"></div -->
+                                    <img src="images/geo.png" alt="">
+                            </div>
+                            <div class="countries">
+                                <div class="country-percentage">
+                                    <div class="flag">
+                                        <a href="#">
+                                            <img src="images/united-states-of-america.svg" alt="USA flag">
+                                        </a>
+                                    </div>
+                                    <div class="bar-content">
+                                        <div class="bar-text">
+                                            <div class="country">
+                                                <h4>United States</h4>
+                                            </div>
+                                            <div class="bar-pecentage">
+                                                <span>34%</span>
+                                            </div>
+                                        </div>
+                                        <div class="bar">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="country-percentage">
+                                    <div class="flag">
+                                        <a href="#">
+                                            <img src="images/canada.svg" alt="USA flag">
+                                        </a>
+                                    </div>
+                                    <div class="bar-content">
+                                        <div class="bar-text">
+                                            <div class="country">
+                                                <h4>United States</h4>
+                                            </div>
+                                            <div class="bar-pecentage">
+                                                <span>20%</span>
+                                            </div>
+                                        </div>
+                                        <div class="bar">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="country-percentage">
+                                    <div class="flag">
+                                        <a href="#">
+                                            <img src="images/germany.svg" alt="USA flag">
+                                        </a>
+                                    </div>
+                                    <div class="bar-content">
+                                        <div class="bar-text">
+                                            <div class="country">
+                                                <h4>United States</h4>
+                                            </div>
+                                            <div class="bar-pecentage">
+                                                <span>15%</span>
+                                            </div>
+                                        </div>
+                                        <div class="bar">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="country-percentage">
+                                    <div class="flag">
+                                        <a href="#">
+                                            <img src="images/france.svg" alt="USA flag">
+                                        </a>
+                                    </div>
+                                    <div class="bar-content">
+                                        <div class="bar-text">
+                                            <div class="country">
+                                                <h4>United States</h4>
+                                            </div>
+                                            <div class="bar-pecentage">
+                                                <span>8%</span>
+                                            </div>
+                                        </div>
+                                        <div class="bar">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="copy-right">
+                        <span>Copyright © 2019-2022 <a href="#">Themesberg</a></span>
+                    </div>
+                    <div class="list">
+                        <menu>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </menu>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+        <!-- js charts codes link -->
+        <script src="scripts/charts.js"></script>
+</body>
+</html>

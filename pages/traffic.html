@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles/style.css">
+    <link rel="stylesheet" href="../css/styles/traffic.css">
+    <link rel="stylesheet" href="../css/styles/responsive.css">
+    <link rel="stylesheet" href="../css/fonts/font.css">
+    <!-- google charts libirary link -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Chartist.js libirary links -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <!-- font awesome libirary link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Rocket dashboard</title>
+</head>
+<body>
+    <input type="checkbox" name="menu" id="menu">
+    <main>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="Rocket">
+                </div>
+                <div class="menu-button">
+                    <span class="menu"><label for="menu"><i class="fa-solid fa-bars fa-2xl"></i></label></span>
+                    <span class="close"><label for="menu"><i class="fa-solid fa-xmark fa-2xl"></i></label></span>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard-content">
+            <aside>
+                <div class="side-bar">
+                    <div class="sidebar-top">
+                        <div class="profile-picture">
+                            <img src="../images/profile-picture-3.jpg" alt="girl">
+                        </div>
+                        <div class="text">
+                            <h2>Hi, Jane</h2>
+                            <button class="button">
+                                <span class="icon-margin"><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                    <div class="side-bar-block">
+                        <menu class="block-items">
+                            <li class="item">
+                                <a href="../index.html">
+                                    <span class="item-icon"><i class="fa-solid fa-chart-pie"></i>
+                                    </span>
+                                    <h6>Overview</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="messages.html">
+                                    <span class="item-icon"><i class="fa-solid fa-inbox"></i>
+                                    </span>
+                                    <h6>Messages</h6>
+                                    <span class="notification">4</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="traffic.html">
+                                    <span class="item-icon"><i class="fa-solid fa-chart-line"></i>
+                                    </span>
+                                    <h6>Traffic & Engagement</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="item-icon"><i class="fa-solid fa-mobile-screen"></i>
+                                    </span>
+                                    <h6>App Analysis</h6>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="item-icon"><i class="fa-solid fa-user-check"></i>
+                                    </span>
+                                    <h6>Users list</h6>
+                                </a>
+                            </li>
+                        </menu>
+                    </div>
+                </div>
+            </aside>
+            <section class="content">
+                <div class="actions-bar">
+                    <div class="action-button">
+                        <label for="categories">
+                            <a class="more-option button">
+                                Categories
+                                <span class="button-icon"><i class="fa-solid fa-chevron-down fa-xs" style="margin-left:5px ;"></i></span>
+                            </a>
+                        </label>
+                    </div>
+                        <input type="checkbox" name="categories" id="categories" style="display: none;">
+                    <div class="floating-options">
+                        <menu>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-eye icon-margin"></i>
+                                    </span>
+                                    My App
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-eye icon-margin"></i>
+                                    </span>
+                                    My website
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-eye icon-margin"></i>
+                                    </span>
+                                    Worldwide Traffic
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-eye icon-margin"></i>
+                                    </span>
+                                    Niche Traffic
+                                </a>
+                            </li>
+                        </menu>
+                    </div>
+                    <div class="action-group-button">
+                        <div class="share-button left-group-button">
+                            <button class="button">Share</button>
+                        </div>
+                        <div class="share-button right-group-button">
+                            <button class="button">Export</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="chart-card split full">
+                        <div class="chart-details">
+                            <div class="block">
+                                <span class="sub-title">Traffic Share</span>
+                                <h4 class="main-title">Direct</h4>
+                                <div class="line">
+                                    <span class="percentage-up"><span></span>51.5%</span> 
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="category"><span>Direct</span><span> 51.50%</span></div>
+                                <div class="category"><span>Referrals</span><span>29.40%</span></div>
+                                <div class="category"><span>Organic</span><span>9.10%</span></div>
+                                <div class="category"><span>Social</span><span>6.50%</span></div>
+                                <div class="category"><span>Mail</span><span>3.50%</span></div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart ct-golden-section" id="traffic-share2"></div>  
+                        </div>
+                    </div>
+                    <div class="chart-card split full">
+                        <div class="chart-details">
+                            <div class="block">
+                                <span class="sub-title">Organic vs paid Search</span>
+                                <h4 class="main-title">Traffic Distribution</h4>
+                                <div class="line">
+                                    <span class="percentage-up"><span></span>10.57%</span> 
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="category"><span>Direct</span></div>
+                                <div class="category"><span>Referrals</span></div>
+                                <div class="category"><span>Organic</span></div>
+                                <div class="category"><span>Social</span></div>
+                                <div class="category"><span>Mail</span></div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart pie ct-major-tenth" id="multi-lines"></div> 
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="table-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Traffic Source</th>
+                                        <th>Source Type</th>
+                                        <th>Category</th>
+                                        <th>Global Rank</th>
+                                        <th>Traffic Share</th>
+                                        <th>Change</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <span class="icon-margin"><i class="fa-solid fa-earth-africa"></i></span>
+                                            <span>Direct</span>
+                                        </td>
+                                        <td>Direct</td>
+                                        <td>__</td>
+                                        <td>__</td>
+                                        <td>
+                                            <div class="bar-content">
+                                                <div class="bar-text">
+                                                    <div class="bar-pecentage">
+                                                        <span class="small icon-margin">51%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div class="bar-background"></div>
+                                                    <div class="bar-foreground"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="up-arrow icon-margin"><i class="fa-solid fa-arrow-up"></i>
+                                            </span>
+                                            2,45%
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <span class="icon-margin">
+                                                <i class="fa-brands fa-google"></i>
+                                            </span>
+                                            <span>Google Serach</span>
+                                        </td>
+                                        <td>Search / Organic</td>
+                                        <td>__</td>
+                                        <td>__</td>
+                                        <td>
+                                            <div class="bar-content">
+                                                <div class="bar-text">
+                                                    <div class="bar-pecentage">
+                                                        <span class="small icon-margin">18%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div class="bar-background"></div>
+                                                    <div class="bar-foreground"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="up-arrow icon-margin"><i class="fa-solid fa-arrow-up"></i>
+                                            </span>
+                                            17,67%
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <span class="icon-margin">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                            <span>Youtube.com</span>
+                                        </td>
+                                        <td>Social</td>
+                                        <td class="small blue fw600">Arts & Entertainment</td>
+                                        <td>#2</td>
+                                        <td>
+                                            <div class="bar-content">
+                                                <div class="bar-text">
+                                                    <div class="bar-pecentage">
+                                                        <span class="small icon-margin">18%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div class="bar-background"></div>
+                                                    <div class="bar-foreground"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="up-arrow icon-margin">
+                                            </span>
+                                            __
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <span class="icon-margin">
+                                                <i class="fa-brands fa-yahoo"></i>
+                                            </span>
+                                            <span>Yahoo.com</span>
+                                        </td>
+                                        <td>Referral</td>
+                                        <td class="small blue fw600">News & Media</td>
+                                        <td>#11</td>
+                                        <td>
+                                            <div class="bar-content">
+                                                <div class="bar-text">
+                                                    <div class="bar-pecentage">
+                                                        <span class="small icon-margin">8%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div class="bar-background"></div>
+                                                    <div class="bar-foreground"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="down-arrow icon-margin"><i class="fa-solid fa-arrow-down"></i>
+                                            </span>
+                                            9,30%
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <span class="marigin-icon">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </span>
+                                            <span>Twitter</span>
+                                        </td>
+                                        <td>Social</td>
+                                        <td class="small blue fw600">Social Networks</td>
+                                        <td>#4</td>
+                                        <td>
+                                            <div class="bar-content">
+                                                <div class="bar-text">
+                                                    <div class="bar-pecentage">
+                                                        <span class="small icon-margin">4%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div class="bar-background"></div>
+                                                    <div class="bar-foreground"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="up-arrow icon-margin">
+                                            </span>
+                                            __
+                                        </td>
+                                    </tr>   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="copy-right">
+                        <span>Copyright © 2019-2022 <a href="#">Themesberg</a></span>
+                    </div>
+                    <div class="list">
+                        <menu>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </menu>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+    <!-- js charts codes link -->
+    <script src="../scripts/charts.js"></script>
+</body>
+</html>
